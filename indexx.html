@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Solar System</title>
+    <style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.stars {
+			background: black url("stars.png") repeat top center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -2;
+		}
+		.twinkling {
+			background: transparent url("twinkling.png") repeat top center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+			animation: move-stars 200s linear infinite;
+		}
+		@keyframes move-stars {
+			0%{background-position: 0 0;}
+			100%{background-position: -10000px -5000px;}
+		}
+		.system {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.orbita {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px  white solid;
+			border-radius: 100%;
+			position: absolute;
+		}
+		.earth {
+			height: 500px;
+			width: 500px;
+			animation: spin 8s linear infinite;
+		}
+		.earth-img {
+			position: absolute;
+			top: 50%;
+			left: -12px;
+			border-radius: 100%;
+			transform: translateY(-50%);
+		}
+	
+		@keyframes spin{
+			0%{transform: rotate(0deg);}
+			100%{transform: rotate(360deg);}
+		}
+		.mars {
+			height: 600px;
+			width: 600px;
+			animation: spin 9s linear infinite;
+		}
+		.mars-img {
+			position: absolute;
+			top: 50%;
+			left: -12px;
+			border-radius: 100%;
+			transform: translateY(-50%);
+		}
+		.sun {
+			animation: spin 8s linear infinite;
+		}
+		.asteroidi {
+			height: 1000px;
+			width: 1000px;
+			animation: spin 30s linear infinite;
+		}
+		.asteroidi-img {
+			position: absolute;
+			top: 50%;
+			right: 130px;
+			border-radius: 100%;
+			transform: translateY(-50%);
+		}
+		.orbita1 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px  rgba(255, 255, 255, 0) solid;
+			border-radius: 100%;
+			position: absolute;
+		}
+		.jupiter {
+			height: 800px;
+			width: 800px;
+			animation: spin 5s linear infinite;
+		}
+		.jupiter-img {
+			position: absolute;
+			top: 50%;
+			left: -12px;
+			border-radius: 100%;
+			transform: translateY(-50%);
+		}
+		.saturn {
+			height: 900px;
+			width: 900px;
+			animation: spin 6s linear infinite;
+		}
+		.saturn-img {
+			position: absolute;
+			top: 50%;
+			left: -12px;
+			border-radius: 100%;
+			transform: translateY(-50%);
+		}
+		.uranus {
+			height: 1000px;
+			width: 1000px;
+			animation: spin 6.5s linear infinite;
+		}
+		.uranus-img {
+			position: absolute;
+			top: 50%;
+			left: -12px;
+			border-radius: 100%;
+			transform: translateY(-50%);
+		}
+		.neptune {
+			height: 1100px;
+			width: 1100px;
+			animation: spin 7.5s linear infinite;
+		}
+		.neptune-img {
+			position: absolute;
+			top: 50%;
+			left: -12px;
+			border-radius: 100%;
+			transform: translateY(-50%);
+		}
+		.pluto {
+			height: 1400px;
+			width: 1190px;
+			animation: spin 35s linear infinite;
+		}
+		.pluto-img {
+			position: absolute;
+			top: 50%;
+			left: -12px;
+			border-radius: 100%;
+			transform: translateY(-50%);
+		}
+		.venus {
+			height: 400px;
+			width: 400px;
+			animation: spin 40s linear infinite;
+		}
+		.venus-img {
+			position: absolute;
+			top: 50%;
+			left: -12px;
+			border-radius: 100%;
+			transform: translateY(-50%);
+		}
+		.mercury {
+			height: 300px;
+			width: 300px;
+			animation: spin 20s linear infinite;
+		}
+		.mercury-img {
+			position: absolute;
+			top: 50%;
+			left: -12px;
+			border-radius: 100%;
+			transform: translateY(-50%);
+		}
+    </style>
+</head>
+<body>
+	<div class="stars"></div>
+	<div class="twinkling"></div>
+	<div class="system">
+		<div class="sun">
+			<img src="https://cdn.discordapp.com/attachments/1117009447223570464/1138399553628934144/sun.png" 
+			alt="sun" 
+			class="sun-img"/>
+		</div>
+		<div class="orbita mercury">
+			<img src="https://www.pngplay.com/wp-content/uploads/9/Mercury-Planet-Transparent-Images.png"
+			 width="17px"
+			 height="17px"
+			 alt="mercury"
+			 class="mercury-img"/>
+		</div>
+		<div class="orbita venus">
+			<img src="https://www.pngall.com/wp-content/uploads/11/Venus-PNG-Photos.png"
+			 width="7.5%"
+			 height="7.5%"
+			 alt="venus"
+			 class="venus-img"/>
+		</div>
+		<div class="orbita earth">
+			<img src="https://cdn.discordapp.com/attachments/1117009447223570464/1138399553339535480/earth.png"
+			 alt="earth"
+			 class="earth-img"/>
+		</div>
+		<div class="orbita mars">
+			<img src="https://cdn.discordapp.com/attachments/1117009447223570463/1138418153320361984/mars.png"
+			 alt="mars"
+			 class="mars-img"/>
+		</div>
+		<div class="orbita1 asteroidi">
+			<img src="https://solar-system-simulation.rodolfoeduardolorca.com/asteroid%20belt.png"
+			 alt="asteroidi"
+			 class="asteroidi-img"/>
+		</div>
+		<div class="orbita jupiter">
+			<img src="https://cdn.discordapp.com/attachments/1117009447223570463/1138421726900920361/jupiter.png"
+			 alt="jupiter"
+			 class="jupiter-img"/>
+		</div>
+		<div class="orbita saturn">
+			<img src="https://cdn.discordapp.com/attachments/1117009447223570463/1138421728125657088/saturn.png"
+			 alt="saturn"
+			 class="saturn-img"/>
+		</div>
+		<div class="orbita uranus">
+			<img src="https://cdn.discordapp.com/attachments/1117009447223570463/1138421728385712258/uranus.png"
+			 alt="uranus"
+			 class="uranus-img"/>
+		</div>
+		<div class="orbita neptune">
+			<img src="https://cdn.discordapp.com/attachments/1117009447223570463/1138421727295189064/neptune.png"
+			 alt="neptune"
+			 class="neptune-img"/>
+		</div>
+		<div class="orbita pluto">
+			<img src="https://cdn.discordapp.com/attachments/1117009447223570463/1138421727840452688/pluto.png"
+			 alt="pluto"
+			 class="pluto-img"/>
+		</div>
+	</div>
+</body>
+</html>
